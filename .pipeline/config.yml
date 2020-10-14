@@ -13,14 +13,6 @@ steps:
   cloudFoundryDeploy:
     dockerImage: 'ppiper/cf-cli'
     mtaDeployParameters: '-f --version-rule ALL'
-  sapNexusStage:
-    stagingProfile: 'integration'
-    repositoryFormat: 'npm'
-  sapNexusUploadArtifacts:
-    packaging: 'mtar'
-    buildDescriptorFile: 'mta.yaml'
-    uploadFile: 'cloud-sf-extension-cap-sample_1.0.0.mtar'
-    artifactType: 'mta'
   mtaBuild:
     mtaBuildTool: "cloudMbt"
 
